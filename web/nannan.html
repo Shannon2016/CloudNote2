@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="//vuejs.org/js/vue.min.js"></script>
+    <!-- import stylesheet -->
+    <link rel="stylesheet" href="//unpkg.com/iview/dist/styles/iview.css">
+    <!-- import iView -->
+    <script src="//unpkg.com/iview/dist/iview.min.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        <i-button v-for="item in ['primary','dashed']" :type="item"> </i-button>
+        <Row>
+            <i-Col span="12">
+                <Row>
+                    <i-Col span="12">
+dfgfdfg
+                    </i-Col>
+                    <i-Col span="6">
+                        <i-input></i-input>
+                    </i-Col>
+                    <i-Col span="6">
+sdgffg
+                    </i-Col>
+                </Row>
+
+
+            </i-Col>
+            <i-Col span="12">
+
+            </i-Col>
+        </Row>
+        <Icon type="ios-search"></Icon>
+        <Page :total="100" ></Page>
+        <Breadcrumb>
+            <Breadcrumb-Item to="/">Home</Breadcrumb-Item>
+            <Breadcrumb-Item to="/components/breadcrumb">Components</Breadcrumb-Item>
+            <Breadcrumb-Item>Breadcrumb</Breadcrumb-Item>
+        </Breadcrumb>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                valueHalf:3
+            },
+            methods: {
+                show: function () {
+                    this.visible = true;
+                }
+            }
+        })
+    </script>
+</body>
+</html>
